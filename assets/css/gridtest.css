@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.gridcontainer {
+    display: grid;
+    height: 100vh;
+}
+
+header {
+    background-color: blue;
+}
+.hero {
+    background-color: red;
+}
+main {
+    background-color: yellow;
+}
+footer {
+    background-color: green;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    'links links links bedrijfsnaam bedrijfsnaam bedrijfsnaam menubalk menubalk menubalk rechts rechts rechts'
+    'copyright copyright copyright copyright naw naw naw naw socilas socilas socilas socilas';
+}
+
+.links {
+    background-color: paleturquoise;
+    grid-area: links;
+}
+.bedrijfsnaam {
+    background-color: red;
+    grid-area: bedrijfsnaam;
+}
+.menubalk {
+    background-color: blue;
+    grid-area: menubalk;
+}
+.rechts {
+    background-color: green;
+    grid-area: rechts;
+}
+.copyright {
+    background-color:powderblue;
+    grid-area: copyright;
+}
+
+.naw {
+    background-color: pink;
+    grid-area: naw;
+ 
+}
+.socilas {
+    background-color: purple;
+    grid-area: socilas;
+}
+
+
+@media (max-width: 600px) { 
+    .rechts, .links {
+        display: none;
+    }
+    footer {
+        grid-template-areas: 
+        'bedrijfsnaam'
+        'menubalk'
+        'naw'
+        'socilas'
+        'copyright'
+
+        ;
+
+    }
+}
